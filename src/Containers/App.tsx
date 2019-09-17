@@ -41,9 +41,7 @@ class App extends React.Component<IProps, IState> {
 
     return (
       <Fragment>
-        <h1 className={styles.yellow}>
-          REACT custom boilerplate with typescript
-        </h1>
+        <h1 className={styles.yellow}>DANIEL's PORTFOLIO PAGE</h1>
         <Input inputValue={inputValue} handleChange={this.handleChange} />
         <p>Input Value: {inputValue}</p>
         <p className={styles.main}>{test}</p>
