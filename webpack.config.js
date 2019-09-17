@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// 192.168.0.59
+
 module.exports = env => {
   const envValue = env || 'production';
 
@@ -26,7 +28,10 @@ module.exports = env => {
       path: path.resolve(__dirname, 'docs'),
       filename: 'app.bundle.js'
     },
-    devServer: { port: 3000 },
+    devServer: {
+      host: '192.168.0.59', //your ip address
+      port: 3000
+    },
     module: {
       rules: [
         {
