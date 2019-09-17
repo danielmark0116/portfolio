@@ -20,7 +20,7 @@ module.exports = env => {
 
   return {
     mode: envValue,
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     optimization: optimizationObject,
     output: {
       path: path.resolve(__dirname, 'docs'),
@@ -32,6 +32,10 @@ module.exports = env => {
         {
           test: /\.svg$/,
           loader: 'svg-inline-loader'
+        },
+        {
+          rules: [{ test: /\.tsx?$/, loader: 'awesome-typescript-loader' }], // other loader configuration goes in the array
+          resolve: { extensions: ['.js', '.jsx', '.react.js', '.ts', '.tsx'] }
         },
         {
           test: /\.js$/,
@@ -47,6 +51,7 @@ module.exports = env => {
           test: /\.s[ac]ss$/i,
           use: [
             'style-loader',
+            { loader: 'css-modules-typescript-loader' },
             {
               loader: 'css-loader',
               options: {
