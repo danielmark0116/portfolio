@@ -1,11 +1,13 @@
 import * as React from 'react';
 
+import BackgroundColumns from './BackgroundColumns';
+
 import * as style from '../styles/main.scss';
 
 import { backgroundMoveAnimation } from '../animations/background';
 
 interface IProps {
-  children: any;
+  children: React.ReactNode;
 }
 
 export default class Background extends React.Component<IProps, {}> {
@@ -25,6 +27,8 @@ export default class Background extends React.Component<IProps, {}> {
         ref={this.nodeRef}
         className={style.main_container}
       >
+        <BackgroundColumns position={2} />
+        <BackgroundColumns position={1} />
         <div>{children}</div>
       </main>
     );

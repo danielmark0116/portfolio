@@ -29,7 +29,7 @@ module.exports = env => {
       filename: 'app.bundle.js'
     },
     devServer: {
-      host: '192.168.0.59', //your ip address
+      // host: '192.168.0.59', //your ip address
       port: 3000
     },
     module: {

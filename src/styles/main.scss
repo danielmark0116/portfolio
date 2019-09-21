@@ -1,12 +1,14 @@
-@import 'variables.scss';
-@import 'font.scss';
+@import 'variables';
+@import 'font';
+@import 'typography';
 
 // MIXINS
 @import 'mixins/rwd';
 @import 'mixins/shadow';
 
 // COMPONENTS
-@import 'components/main_component.scss';
+@import 'components/main_component';
+@import 'components/background_columns';
 
 body {
   margin: 0;
