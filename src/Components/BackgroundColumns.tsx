@@ -5,10 +5,11 @@ import * as style from '../styles/main.scss';
 
 interface IProps {
   position: 1 | 2;
+  nodes: Array<React.RefObject<HTMLDivElement>>;
 }
 
-export default function BackgroundColumns(props: IProps) {
-  const { position } = props;
+const BackgroundColumns = (props: IProps) => {
+  const { position, nodes } = props;
 
   return (
     <Fragment>
@@ -21,11 +22,13 @@ export default function BackgroundColumns(props: IProps) {
             : null
         }
       >
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div ref={nodes[0]}></div>
+        <div ref={nodes[1]}></div>
+        <div ref={nodes[2]}></div>
+        <div ref={nodes[3]}></div>
       </div>
     </Fragment>
   );
-}
+};
+
+export default BackgroundColumns;

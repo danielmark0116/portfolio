@@ -1,4 +1,4 @@
-import { TimelineLite, Power1 } from 'gsap/TweenMax';
+import { TimelineMax, Power1 } from 'gsap/TweenMax';
 import { Back } from 'gsap';
 
 export const btnReveal = (
@@ -6,7 +6,9 @@ export const btnReveal = (
   initDelay: number,
   index: number
 ) => {
-  const animationTimeline = new TimelineLite();
+  const animationTimeline = new TimelineMax({
+    repeat: 0
+  });
 
   animationTimeline
     .to(node, 0.3, { y: -20, ease: Power1.easeInOut })
