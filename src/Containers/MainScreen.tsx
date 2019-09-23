@@ -2,6 +2,10 @@ import * as React from 'react';
 
 import Background from '../Components/Background';
 
+import Logo from '../Components/Logo';
+import Title from '../Components/Title';
+import SocialIcons from '../Components/SocialIcons';
+
 import * as style from '../styles/main.scss';
 
 export default class MainScreen extends React.Component<{}, {}> {
@@ -9,9 +13,9 @@ export default class MainScreen extends React.Component<{}, {}> {
     return (
       <Background>
         <div>
-          <h4 className={style.text_center}>pic</h4>
-          <h1>Daniel Grychtoł</h1>
-          <h4 className={style.text_center}>socials</h4>
+          <Logo size="large" />
+          <Title>Daniel Grychtoł</Title>
+          <SocialIcons />
         </div>
       </Background>
     );

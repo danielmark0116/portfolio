@@ -4,8 +4,15 @@ interface CssExports {
   'background_column_left': string;
   'background_column_right': string;
   'background_columns': string;
+  'logo': string;
+  'logo_bg': string;
+  'logo_large': string;
+  'logo_small': string;
   'main': string;
   'main_container': string;
+  'social_icon': string;
+  'social_icon_bg': string;
+  'social_icons_container': string;
   'text_center': string;
 }
 declare const cssExports: CssExports;
